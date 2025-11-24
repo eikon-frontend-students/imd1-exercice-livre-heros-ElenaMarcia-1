@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #04161a;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+  background: #275659;
+  position: relative;
+  z-index: 2;
+}
+
+.header-image img {
+  width: 100%;
+  display: block;
+}
+
+.text-block {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.buttons1,
+.buttons2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: darkgray;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px 30px;
+  margin: 10px 0;
+  width: 80%;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.buttons1:hover,
+.buttons2:hover {
+  background: darkcyan;
+  transform: scale(1.05);
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: scaleX(1);
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-600px) scaleX(1.1);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-1200px) scaleX(0.9);
+    opacity: 0;
+  }
+}

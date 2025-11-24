@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le miroir de la vérité</title>
+    <link rel="stylesheet" href="page4.css" />
+  </head>
+  <body>
+    <div class="glitch-bg" id="glitch-bg"></div>
+    <div class="glitch-scanline"></div>
+
+    <div class="container">
+      <div class="header-image">
+        <img src="Chapter4.jpg" alt="salle miroir" />
+      </div>
+
+      <div class="text-block">
+        <h1>Le miroir de la vérité</h1>
+        <p>
+          Toucher le miroir Le miroir t’avale. Tu chutes. Tu atterris dans une
+          pièce blanche. Un double plus vieux de toi-même t’attend. « Ce monde
+          est un mensonge. Mais tu peux sortir. »
+        </p>
+      </div>
+
+      <div class="buttons">
+        <a class="buttons1" href="page8.html">ECOUTER</a>
+        <a class="buttons2" href="page9.html">REJETER</a>
+      </div>
+    </div>
+
+    <!-- JS pour générer les blocs glitch partout -->
+    <script>
+      const glitchBg = document.getElementById("glitch-bg");
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      for (let i = 0; i < 80; i++) {
+        // nombre de blocs
+        const block = document.createElement("div");
+        block.className = "glitch-block";
+        block.style.top = Math.random() * screenHeight + "px";
+        block.style.left = Math.random() * screenWidth + "px";
+        block.style.width = 20 + Math.random() * 100 + "px";
+        block.style.height = 10 + Math.random() * 50 + "px";
+        glitchBg.appendChild(block);
+      }
+    </script>
+  </body>
+</html>

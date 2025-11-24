@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DECOnExIOn</title>
+    <link rel="stylesheet" href="page5.css" />
+  </head>
+  <body>
+    <div class="glitch-bg" id="glitch-bg"></div>
+    <div class="glitch-scanline"></div>
+
+    <div class="container">
+      <div class="header-image">
+        <img src="rejet.png" alt="salle miroir" />
+      </div>
+
+      <div class="text-block">
+        <h1>DECOnExIOn</h1>
+        <p>
+          Deconexion.. Tu cours. Le monde se désintègre. Une alarme crie : «
+          Patient 23 — rejet de simulation. » Tu tombes.
+        </p>
+      </div>
+
+      <div class="buttons">
+        <a class="buttons2" href="page1.html">CONEXION</a>
+      </div>
+    </div>
+
+    <script>
+      const glitchBg = document.getElementById("glitch-bg");
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      for (let i = 0; i < 80; i++) {
+        const block = document.createElement("div");
+        block.className = "glitch-block";
+        block.style.top = Math.random() * screenHeight + "px";
+        block.style.left = Math.random() * screenWidth + "px";
+        block.style.width = 20 + Math.random() * 100 + "px";
+        block.style.height = 10 + Math.random() * 50 + "px";
+        glitchBg.appendChild(block);
+      }
+    </script>
+  </body>
+</html>

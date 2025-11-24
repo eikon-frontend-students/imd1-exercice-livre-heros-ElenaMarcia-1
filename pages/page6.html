@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le CHOIX</title>
+    <link rel="stylesheet" href="page6.css" />
+  </head>
+  <body>
+    <div class="glitch-bg" id="glitch-bg"></div>
+    <div class="glitch-scanline"></div>
+
+    <div class="container">
+      <div class="header-image">
+        <img src="chapitre6.png" alt="salle miroir" />
+      </div>
+
+      <div class="text-block">
+        <h1>Le CHOIX</h1>
+        <p>
+          Ses lèvres se mettent à bouger mais émmettent aucun son. Les écrans
+          affichent tour à tour « Reste ici, ou affronte la réalité. À toi de
+          voir. »
+        </p>
+      </div>
+
+      <div class="buttons">
+        <a class="buttons1" href="page8.html">AFRONTER</a>
+        <a class="buttons2" href="page11.html">REJETER</a>
+      </div>
+    </div>
+
+    <script>
+      const glitchBg = document.getElementById("glitch-bg");
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      for (let i = 0; i < 80; i++) {
+        // nombre de blocs
+        const block = document.createElement("div");
+        block.className = "glitch-block";
+        block.style.top = Math.random() * screenHeight + "px";
+        block.style.left = Math.random() * screenWidth + "px";
+        block.style.width = 20 + Math.random() * 100 + "px";
+        block.style.height = 10 + Math.random() * 50 + "px";
+        glitchBg.appendChild(block);
+      }
+    </script>
+  </body>
+</html>
